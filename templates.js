@@ -8,13 +8,9 @@ const radioGroups = []
 function range(text, min, max) {
     const div = document.createElement("div");
 
-    const l = document.createElement("p");
+    const l = document.createElement("label");
     const lId = "label" + lc++;
     l.id = lId;
-
-    const p = document.createElement("p");
-    const t = document.createTextNode(text);
-    p.appendChild(t);
 
     const r = document.createElement("input");
     r.type = "range";
