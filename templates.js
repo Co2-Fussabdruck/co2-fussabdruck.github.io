@@ -162,7 +162,8 @@ function result(percentages) {
             nearest_percentage = percentages[i];
         }
     }
+
     const body = document.querySelector("body");
     
-    body.innerHTML = nearest_percentage[1]
+    body.innerHTML = "<div class='result-container'>" + nearest_percentage[1] + "</div>"
 }
