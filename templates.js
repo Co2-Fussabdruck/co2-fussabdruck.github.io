@@ -30,6 +30,8 @@ function range(text, min, max) {
     const body = document.querySelector("body");
     body.appendChild(div);
 
+    document.getElementById(lId).innerText = document.getElementById(rId).value
+
     document.getElementById(rId).addEventListener("input", () => {
         document.getElementById(lId).innerText = document.getElementById(rId).value;
     });
