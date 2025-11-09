@@ -1,174 +1,162 @@
 let lc = 0;
 let rc = 0;
-let tc = 0;
-let tlc = 0;
 let radioGroupCounter = 0;
-const radioGroups = []
+const radioGroups = [];
 
-function range(text, min, max) {
+/* === Range-Frage === */
+function range(text, min = 1, max = 5) {
     const div = document.createElement("div");
 
-    const p = document.createElement("p")
-    const t = document.createTextNode(text)
-    p.appendChild(t)
+    const p = document.createElement("p");
+    p.textContent = text;
 
-    const r = document.createElement("input");
-    r.type = "range";
-    r.min = min;
-    r.max = max;
-    const rId = "range" + rc++;
-    r.id = rId;
+    const input = document.createElement("input");
+    input.type = "range";
+    input.min = min;
+    input.max = max;
+    const rangeId = "range" + rc++;
+    input.id = rangeId;
 
-    const l = document.createElement("label");
-    const lId = "label" + lc++;
-    l.id = lId;
-    l.for = rId
+    const label = document.createElement("label");
+    label.id = "label" + lc++;
+    label.htmlFor = rangeId;
+    label.innerText = input.value;
+
+    input.addEventListener("input", () => {
+        label.innerText = input.value;
+    });
 
     div.appendChild(p);
-    div.appendChild(r);
-    div.appendChild(l);
+    div.appendChild(input);
+    div.appendChild(label);
 
-    const body = document.querySelector("body");
-    body.appendChild(div);
-
-    document.getElementById(lId).innerText = document.getElementById(rId).value
-
-    document.getElementById(rId).addEventListener("input", () => {
-        document.getElementById(lId).innerText = document.getElementById(rId).value;
-    });
+    document.body.appendChild(div);
 }
 
-function checkbox(text,cb) {
+/* === Checkbox-Gruppe === */
+function checkbox(text, options) {
     const div = document.createElement("div");
-    const d = document.createElement("div")
+    const p = document.createElement("p");
+    p.textContent = text;
+    div.appendChild(p);
 
-    for (let i = 0; i < cb.length; i++) {
-        const checkbox = document.createElement("input")
-        checkbox.type = "checkbox"
-        checkbox.value = cb[i][1]
-        checkbox.id = cb[0] + i
+    for (let i = 0; i < options.length; i++) {
+        const [labelText, value] = options[i];
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.value = value;
+        checkbox.id = "checkbox" + i;
 
-        const label = document.createElement("label")
-        const label_t = document.createTextNode(cb[i][0])
-        label.appendChild(label_t)
-        label.for = cb[0] + i
+        const label = document.createElement("label");
+        label.htmlFor = checkbox.id;
+        label.textContent = labelText;
 
-        d.appendChild(checkbox)
-        d.appendChild(label)
-        d.appendChild(document.createElement("br"))
+        div.appendChild(checkbox);
+        div.appendChild(label);
+        div.appendChild(document.createElement("br"));
     }
 
-    const p = document.createElement("p");
-    const t = document.createTextNode(text);
-    p.appendChild(t);
-
-    div.appendChild(p)
-    div.appendChild(d)
-
-    const body = document.querySelector("body");
-    body.appendChild(div);
+    document.body.appendChild(div);
 }
 
-function radio(text,r) {
+/* === Radio-Gruppe === */
+function radio(text, options) {
     const div = document.createElement("div");
-    const d = document.createElement("div")
+    const p = document.createElement("p");
+    p.textContent = text;
+    div.appendChild(p);
 
     const groupName = "radioGroup" + radioGroupCounter++;
-    radioGroups.push(groupName)
-    for (let i = 0; i < r.length; i++) {
-        const checkbox = document.createElement("input")
-        checkbox.type = "radio"
-        checkbox.value = r[i][1]
-        checkbox.id = r[0] + i
-        checkbox.name = groupName;
+    radioGroups.push(groupName);
 
-        const label = document.createElement("label")
-        const label_t = document.createTextNode(r[i][0])
-        label.appendChild(label_t)
-        label.for = r[0] + i
+    for (let i = 0; i < options.length; i++) {
+        const [labelText, value] = options[i];
+        const radio = document.createElement("input");
+        radio.type = "radio";
+        radio.value = value;
+        radio.name = groupName;
+        radio.id = groupName + "_" + i;
 
-        d.appendChild(checkbox)
-        d.appendChild(label)
-        d.appendChild(document.createElement("br"))
+        const label = document.createElement("label");
+        label.htmlFor = radio.id;
+        label.textContent = labelText;
+
+        div.appendChild(radio);
+        div.appendChild(label);
+        div.appendChild(document.createElement("br"));
     }
 
-    const p = document.createElement("p");
-    const t = document.createTextNode(text);
-    p.appendChild(t);
-
-    div.appendChild(p)
-    div.appendChild(d)
-
-    const body = document.querySelector("body");
-    body.appendChild(div);
+    document.body.appendChild(div);
 }
 
-function result_button(text,percentages) {
-    const div = document.createElement("div")
-    const button = document.createElement("button")
-    const t = document.createTextNode(text)
-    button.appendChild(t)
-    button.addEventListener("click",()=>{result(percentages)})
-    div.appendChild(button)
-    
-    const body = document.querySelector("body");
-    body.appendChild(div);
+/* === Ergebnis-Button === */
+function result_button(text, percentages) {
+    const div = document.createElement("div");
+    const button = document.createElement("button");
+    button.textContent = text;
+
+    button.addEventListener("click", () => {
+        result(percentages);
+    });
+
+    div.appendChild(button);
+    document.body.appendChild(div);
 }
 
+/* === Ergebnis-Berechnung === */
 function result(percentages) {
-    let value = 0
-    let max_value = 0
+    let value = 0;
+    let max_value = 0;
 
-    const ranges = document.querySelectorAll("input[type=range]")
-    for (let i = 0; i < ranges.length; i++) {
-        value += Number(ranges[i].value - ranges[i].min)
-    }
-    for (let i = 0; i < ranges.length; i++) {
-        max_value += Number(ranges[i].max - ranges[i].min)
-    }
+    // Ranges
+    const ranges = document.querySelectorAll("input[type=range]");
+    ranges.forEach(r => {
+        value += Number(r.value) - Number(r.min);
+        max_value += Number(r.max) - Number(r.min);
+    });
 
-    const checkboxes = document.querySelectorAll("input[type=checkbox]:checked")
-    for (let i = 0; i < checkboxes.length; i++) {
-        value += Number(checkboxes[i].value)
-    }
-    const checkboxes_all = document.querySelectorAll("input[type=checkbox]")
-    for (let i = 0; i < checkboxes_all.length; i++) {
-        max_value += Number(checkboxes_all[i].value)
-    }
+    // Checkboxes
+    const allCheckboxes = document.querySelectorAll("input[type=checkbox]");
+    allCheckboxes.forEach(cb => {
+        max_value += Number(cb.value);
+        if (cb.checked) value += Number(cb.value);
+    });
 
-    let radios = document.querySelectorAll("input[type=radio]:checked")
-    for (let i = 0; i < radios.length; i++) {
-        value += Number(radios[i].value)
-    }
+    // Radios
+    const checkedRadios = document.querySelectorAll("input[type=radio]:checked");
+    checkedRadios.forEach(r => {
+        value += Number(r.value);
+    });
 
-    for (let i = 0; i < radioGroups.length;i++) {
-        const radio_group = document.querySelectorAll("input[type=radio][name=" + radioGroups[i] + "]")
-        let highest_radio = 0
-        for (let j = 0;j < radio_group.length;j++) {
-            if (Number(radio_group[j].value) > highest_radio) {
-                highest_radio = Number(radio_group[j].value)
-            }
-        }
-        max_value += highest_radio
-    }
+    // Radio-Gruppen Max
+    radioGroups.forEach(name => {
+        const group = document.querySelectorAll(`input[name='${name}']`);
+        let highest = 0;
+        group.forEach(r => {
+            if (Number(r.value) > highest) highest = Number(r.value);
+        });
+        max_value += highest;
+    });
 
-    for (let i = 0; i < percentages.length; i++) {
-        percentages[i][1] = percentages[i][1] / 100
-    }
-
-    const percentage = value / max_value
-    let nearest_percentage = percentages[0];
-    let min_diff = Math.abs(percentage - percentages[0][0]);
+    // Prozentuale Bewertung
+    const percentage = value / max_value;
+    let nearest = percentages[0];
+    let minDiff = Math.abs(percentage - percentages[0][0] / 100);
 
     for (let i = 1; i < percentages.length; i++) {
-        const diff = Math.abs(percentage - percentages[i][0]);
-        if (diff < min_diff) {
-            min_diff = diff;
-            nearest_percentage = percentages[i];
+        const diff = Math.abs(percentage - percentages[i][0] / 100);
+        if (diff < minDiff) {
+            minDiff = diff;
+            nearest = percentages[i];
         }
     }
 
-    const body = document.querySelector("body");
-    
-    body.innerHTML = "<div class='result-container'>" + nearest_percentage[1] + "</div>"
+    // Ergebnis ausgeben
+    const resultDiv = document.createElement("div");
+    resultDiv.className = "result-container";
+    resultDiv.textContent = nearest[1];
+
+    document.body.innerHTML = "";
+    document.body.appendChild(resultDiv);
 }
+
