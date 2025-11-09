@@ -1,90 +1,126 @@
 {
     "questions": [
         {
-            "text": "blablabla",
-            "type": "range",
-            "min": 0,
-            "max": 100
+            "text": "Wie oft nutzt du öffentliche Verkehrsmittel oder fährst Fahrrad statt Auto?",
+            "type": "radio",
+            "options": [
+                {
+                    "text": "Nie",
+                    "value": 1
+                },
+                {
+                    "text": "Selten",
+                    "value": 2
+                },
+                {
+                    "text": "Manchmal",
+                    "value": 3
+                },
+                {
+                    "text": "Oft",
+                    "value": 4
+                },
+                {
+                    "text": "Immer",
+                    "value": 5
+                }
+            ]
         },
         {
-            "text": "blablabla",
+            "text": "Welche Verkehrsmittel nutzt du regelmäßig?",
             "type": "checkbox",
             "options": [
                 {
-                    "text": "blablabla",
+                    "text": "Auto (Benzin/Diesel)",
                     "value": 1
                 },
                 {
-                    "text": "blablabla2",
+                    "text": "Elektroauto",
                     "value": 2
                 },
                 {
-                    "text": "blablabla3",
+                    "text": "Fahrrad / Zu Fuß",
                     "value": 3
                 },
                 {
-                    "text": "blablabla4",
+                    "text": "Öffentliche Verkehrsmittel",
                     "value": 4
+                },
+                {
+                    "text": "Flugzeug (mehrmals im Jahr)",
+                    "value": 5
                 }
             ]
         },
         {
-            "text": "blablabla",
+            "text": "Wie häufig isst du tierische Produkte (Fleisch, Milch, Eier)?",
             "type": "radio",
             "options": [
                 {
-                    "text": "blablabla",
-                    "value": 1
+                    "text": "Täglich",
+                    "value": 4
                 },
                 {
-                    "text": "blablabla2",
-                    "value": 2
-                },
-                {
-                    "text": "blablabla3",
+                    "text": "Mehrmals pro Woche",
                     "value": 3
                 },
                 {
-                    "text": "blablabla4",
-                    "value": 4
+                    "text": "Selten",
+                    "value": 2
+                },
+                {
+                    "text": "Nie (vegan)",
+                    "value": 1
                 }
             ]
         },
         {
-            "text": "blablabla",
+            "text": "Wie wird dein Zuhause hauptsächlich beheizt?",
             "type": "radio",
             "options": [
                 {
-                    "text": "blablabla",
-                    "value": 1
+                    "text": "Gas / Öl",
+                    "value": 4
                 },
                 {
-                    "text": "blablabla2",
-                    "value": 2
-                },
-                {
-                    "text": "blablabla3",
+                    "text": "Fernwärme",
                     "value": 3
                 },
                 {
-                    "text": "blablabla4",
-                    "value": 4
+                    "text": "Wärmepumpe / Strom",
+                    "value": 2
+                },
+                {
+                    "text": "Erneuerbare Energie (Solar, Holz, etc.)",
+                    "value": 1
                 }
             ]
         },
         {
-            "text":"blablabla",
-            "type":"result_button"
+            "text": "Berechne dein Ergebnis",
+            "type": "result_button"
         }
     ],
     "answers": [
         {
             "percentage": 0,
-            "text": "blablabla"
+            "text": "Dein CO₂-Fußabdruck ist sehr gering – du lebst klimafreundlich und nachhaltig. Weiter so!"
         },
         {
-            "percentage": 1,
-            "text": "d"
+            "percentage": 25,
+            "text": "Du hast einen unterdurchschnittlichen CO₂-Fußabdruck – kleine Anpassungen könnten ihn weiter verbessern."
+        },
+        {
+            "percentage": 50,
+            "text": "Dein CO₂-Fußabdruck ist durchschnittlich – du kannst durch bewusstere Entscheidungen beim Reisen und Essen viel bewirken."
+        },
+        {
+            "percentage": 75,
+            "text": "Dein CO₂-Fußabdruck ist überdurchschnittlich – prüfe, wo du Energie und Ressourcen einsparen kannst."
+        },
+        {
+            "percentage": 100,
+            "text": "Dein CO₂-Fußabdruck ist sehr hoch – es gibt großes Potenzial, deinen Lebensstil klimafreundlicher zu gestalten."
         }
     ]
 }
