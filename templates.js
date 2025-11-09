@@ -151,6 +151,11 @@ function result(percentages) {
         }
         max_value += highest_radio
     }
+
+    for (let i = 0; i > percentages.length; i++) {
+        percentages[i][1] = percentages[i][1] / 100
+    }
+
     const percentage = value / max_value
     let nearest_percentage = percentages[0];
     let min_diff = Math.abs(percentage - percentages[0][0]);
