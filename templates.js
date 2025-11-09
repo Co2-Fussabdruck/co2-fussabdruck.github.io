@@ -152,7 +152,7 @@ function result(percentages) {
         max_value += highest_radio
     }
 
-    for (let i = 0; i > percentages.length; i++) {
+    for (let i = 0; i < percentages.length; i++) {
         percentages[i][1] = percentages[i][1] / 100
     }
 
