@@ -150,7 +150,7 @@ function result(percentages) {
             nearest = percentages[i];
         }
     }
-
+    const body = document.querySelector("body")
     document.body.innerHTML = nearest[1];
 }
 
