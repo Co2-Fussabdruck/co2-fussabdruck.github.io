@@ -151,12 +151,6 @@ function result(percentages) {
         }
     }
 
-    // Ergebnis ausgeben
-    const resultDiv = document.createElement("div");
-    resultDiv.className = "result-container";
-    resultDiv.textContent = nearest[1];
-
-    document.body.innerHTML = "";
-    document.body.appendChild(resultDiv);
+    document.body.innerHTML = nearest[1];
 }
 
