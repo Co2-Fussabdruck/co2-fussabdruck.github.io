@@ -151,6 +151,6 @@ function result(percentages) {
         }
     }
     const body = document.querySelector("body")
-    document.body.innerHTML = nearest[1];
+    body.innerHTML = nearest[1];
 }
 
