@@ -151,6 +151,6 @@ function result(percentages) {
         }
     }
     const body = document.querySelector("body")
-    body.innerHTML = "<div class='result-container'>" + nearest[1]; + "</div>"
+    body.innerHTML = "<div class='result-container'>" + nearest[1] + "</div>"
 }
 
