@@ -113,23 +113,23 @@
     "answers": [
         {
             "percentage": 0,
-            "text": "🌿 Dein CO₂-Fußabdruck ist extrem niedrig – du lebst sehr klimabewusst und nachhaltig. Großartig!"
+            "text": "🌿 Dein CO₂-Fußabdruck ist extrem niedrig – du lebst sehr klimabewusst und nachhaltig. Großartig! <br> <img src='sehr_niedrig.png'>"
         },
         {
             "percentage": 25,
-            "text": "🌱 Dein CO₂-Fußabdruck ist unterdurchschnittlich – du machst vieles richtig. Kleine Anpassungen könnten ihn weiter verringern."
+            "text": "🌱 Dein CO₂-Fußabdruck ist unterdurchschnittlich – du machst vieles richtig. Kleine Anpassungen könnten ihn weiter verringern. <br> <img src='niedrig.png'>"
         },
         {
             "percentage": 50,
-            "text": "⚖️ Dein CO₂-Fußabdruck ist durchschnittlich – du hast ein ausgewogenes Verhalten, aber noch Potenzial bei Mobilität oder Konsum."
+            "text": "⚖️ Dein CO₂-Fußabdruck ist durchschnittlich – du hast ein ausgewogenes Verhalten, aber noch Potenzial bei Mobilität oder Konsum. <br> <img src='durchschnittlich.png'>"
         },
         {
             "percentage": 75,
-            "text": "🔥 Dein CO₂-Fußabdruck ist überdurchschnittlich – überlege, wo du Energie, Fleischkonsum oder Flüge einsparen kannst."
+            "text": "🔥 Dein CO₂-Fußabdruck ist überdurchschnittlich – überlege, wo du Energie, Fleischkonsum oder Flüge einsparen kannst. <br> <img src='hoch.png'>"
         },
         {
             "percentage": 100,
-            "text": "💨 Dein CO₂-Fußabdruck ist sehr hoch – du kannst viel bewirken, indem du deinen Lebensstil klimafreundlicher gestaltest."
+            "text": "💨 Dein CO₂-Fußabdruck ist sehr hoch – du kannst viel bewirken, indem du deinen Lebensstil klimafreundlicher gestaltest. <br> <img src='sehr_hoch.png'>"
         }
     ]
 }
