@@ -1,135 +1,135 @@
 {
-    "questions": [
-        {
-            "text": "Wie oft nutzt du öffentliche Verkehrsmittel oder fährst Fahrrad statt Auto?",
-            "type": "range",
-            "min": 1,
-            "max": 5
-        },
-        {
-            "text": "Wie häufig fliegst du (Urlaub, Beruf, etc.)?",
-            "type": "range",
-            "min": 0,
-            "max": 5
-        },
-        {
-            "text": "Welche Verkehrsmittel nutzt du regelmäßig?",
-            "type": "checkbox",
-            "options": [
-                { "text": "Auto (Benzin/Diesel)", "value": 4 },
-                { "text": "Elektroauto", "value": 3 },
-                { "text": "Fahrrad / Zu Fuß", "value": 1 },
-                { "text": "Öffentliche Verkehrsmittel", "value": 2 },
-                { "text": "Flugzeug (mehrmals im Jahr)", "value": 5 }
-            ]
-        },
-        {
-            "text": "Wie häufig isst du tierische Produkte (Fleisch, Milch, Eier)?",
-            "type": "radio",
-            "options": [
-                { "text": "Täglich", "value": 4 },
-                { "text": "Mehrmals pro Woche", "value": 3 },
-                { "text": "Selten", "value": 2 },
-                { "text": "Nie (vegan)", "value": 1 }
-            ]
-        },
-        {
-            "text": "Wie oft isst du regional und saisonal erzeugte Lebensmittel?",
-            "type": "range",
-            "min": 1,
-            "max": 5
-        },
-        {
-            "text": "Wie häufig isst du verarbeitete oder importierte Lebensmittel (z. B. Tiefkühlgerichte, Avocados, tropische Früchte)?",
-            "type": "range",
-            "min": 1,
-            "max": 5
-        },
-        {
-            "text": "Wie wird dein Zuhause hauptsächlich beheizt?",
-            "type": "radio",
-            "options": [
-                { "text": "Gas / Öl", "value": 4 },
-                { "text": "Fernwärme", "value": 3 },
-                { "text": "Wärmepumpe / Strom", "value": 2 },
-                { "text": "Erneuerbare Energie (Solar, Holz, etc.)", "value": 1 }
-            ]
-        },
-        {
-            "text": "Wie viel Strom verbrauchst du im Jahr (geschätzt)?",
-            "type": "range",
-            "min": 1,
-            "max": 10
-        },
-        {
-            "text": "Wie viele Personen leben in deinem Haushalt?",
-            "type": "range",
-            "min": 1,
-            "max": 8
-        },
-        {
-            "text": "Wie gut ist dein Zuhause gedämmt?",
-            "type": "radio",
-            "options": [
-                { "text": "Sehr schlecht", "value": 4 },
-                { "text": "Ausreichend", "value": 3 },
-                { "text": "Gut", "value": 2 },
-                { "text": "Sehr gut / Passivhaus", "value": 1 }
-            ]
-        },
-        {
-            "text": "Wie oft kaufst du neue Kleidung, Elektronik oder Möbel?",
-            "type": "radio",
-            "options": [
-                { "text": "Mehrmals im Monat", "value": 4 },
-                { "text": "Einmal im Monat", "value": 3 },
-                { "text": "Einmal pro Quartal", "value": 2 },
-                { "text": "Selten oder Second Hand", "value": 1 }
-            ]
-        },
-        {
-            "text": "Wie oft reparierst, recycelst oder teilst du Gegenstände statt sie neu zu kaufen?",
-            "type": "range",
-            "min": 1,
-            "max": 5
-        },
-        {
-            "text": "Wie oft machst du Urlaub mit dem Flugzeug?",
-            "type": "range",
-            "min": 0,
-            "max": 5
-        },
-        {
-            "text": "Wie häufig nutzt du Ökostrom oder beziehst Energie aus erneuerbaren Quellen?",
-            "type": "range",
-            "min": 1,
-            "max": 5
-        },
-        {
-            "text": "Berechne dein Ergebnis",
-            "type": "result_button"
-        }
-    ],
-    "answers": [
-        {
-            "percentage": 0,
-            "text": "🌿 Dein CO₂-Fußabdruck ist extrem niedrig – du lebst sehr klimabewusst und nachhaltig. Großartig! <br><img src='images/sehr_niedrig.png'>"
-        },
-        {
-            "percentage": 25,
-            "text": "🌱 Dein CO₂-Fußabdruck ist unterdurchschnittlich – du machst vieles richtig. Kleine Anpassungen könnten ihn weiter verringern. <br><img src='images/niedrig.png'>"
-        },
-        {
-            "percentage": 50,
-            "text": "⚖️ Dein CO₂-Fußabdruck ist durchschnittlich – du hast ein ausgewogenes Verhalten, aber noch Potenzial bei Mobilität oder Konsum. <br><img src='images/durchschnittlich.png'>"
-        },
-        {
-            "percentage": 75,
-            "text": "🔥 Dein CO₂-Fußabdruck ist überdurchschnittlich – überlege, wo du Energie, Fleischkonsum oder Flüge einsparen kannst. <br><img src='images/hoch.png'>"
-        },
-        {
-            "percentage": 100,
-            "text": "💨 Dein CO₂-Fußabdruck ist sehr hoch – du kannst viel bewirken, indem du deinen Lebensstil klimafreundlicher gestaltest. <br><img src='images/sehr_hoch.png'>"
-        }
-    ]
+  "questions": [
+    {
+      "text": "Wie oft nutzt du öffentliche Verkehrsmittel oder fährst Fahrrad statt Auto?",
+      "type": "range",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "text": "Wie häufig fliegst du (Urlaub, Beruf, etc.)?",
+      "type": "range",
+      "min": 0,
+      "max": 5
+    },
+    {
+      "text": "Welche Verkehrsmittel nutzt du regelmäßig?",
+      "type": "checkbox",
+      "options": [
+        { "text": "Auto (Benzin/Diesel)", "value": 4 },
+        { "text": "Elektroauto", "value": 3 },
+        { "text": "Fahrrad / Zu Fuß", "value": 1 },
+        { "text": "Öffentliche Verkehrsmittel", "value": 2 },
+        { "text": "Flugzeug (mehrmals im Jahr)", "value": 5 }
+      ]
+    },
+    {
+      "text": "Wie häufig isst du tierische Produkte (Fleisch, Milch, Eier)?",
+      "type": "radio",
+      "options": [
+        { "text": "Täglich", "value": 4 },
+        { "text": "Mehrmals pro Woche", "value": 3 },
+        { "text": "Selten", "value": 2 },
+        { "text": "Nie (vegan)", "value": 1 }
+      ]
+    },
+    {
+      "text": "Wie oft isst du regional und saisonal erzeugte Lebensmittel?",
+      "type": "range",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "text": "Wie häufig isst du verarbeitete oder importierte Lebensmittel (z. B. Tiefkühlgerichte, Avocados, tropische Früchte)?",
+      "type": "range",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "text": "Wie wird dein Zuhause hauptsächlich beheizt?",
+      "type": "radio",
+      "options": [
+        { "text": "Gas / Öl", "value": 4 },
+        { "text": "Fernwärme", "value": 3 },
+        { "text": "Wärmepumpe / Strom", "value": 2 },
+        { "text": "Erneuerbare Energie (Solar, Holz, etc.)", "value": 1 }
+      ]
+    },
+    {
+      "text": "Wie viel Strom verbrauchst du im Jahr (geschätzt)?",
+      "type": "range",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "text": "Wie viele Personen leben in deinem Haushalt?",
+      "type": "range",
+      "min": 1,
+      "max": 8
+    },
+    {
+      "text": "Wie gut ist dein Zuhause gedämmt?",
+      "type": "radio",
+      "options": [
+        { "text": "Sehr schlecht", "value": 4 },
+        { "text": "Ausreichend", "value": 3 },
+        { "text": "Gut", "value": 2 },
+        { "text": "Sehr gut / Passivhaus", "value": 1 }
+      ]
+    },
+    {
+      "text": "Wie oft kaufst du neue Kleidung, Elektronik oder Möbel?",
+      "type": "radio",
+      "options": [
+        { "text": "Mehrmals im Monat", "value": 4 },
+        { "text": "Einmal im Monat", "value": 3 },
+        { "text": "Einmal pro Quartal", "value": 2 },
+        { "text": "Selten oder Second Hand", "value": 1 }
+      ]
+    },
+    {
+      "text": "Wie oft reparierst, recycelst oder teilst du Gegenstände statt sie neu zu kaufen?",
+      "type": "range",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "text": "Wie oft machst du Urlaub mit dem Flugzeug?",
+      "type": "range",
+      "min": 0,
+      "max": 5
+    },
+    {
+      "text": "Wie häufig nutzt du Ökostrom oder beziehst Energie aus erneuerbaren Quellen?",
+      "type": "range",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "text": "Berechne dein Ergebnis",
+      "type": "result_button"
+    }
+  ],
+  "answers": [
+    {
+      "percentage": 0,
+      "text": "🌿 Dein CO₂-Fußabdruck ist extrem niedrig – du lebst sehr klimabewusst und nachhaltig. Großartig! <br><img src=\"images/sehr_niedrig.png\">"
+    },
+    {
+      "percentage": 25,
+      "text": "🌱 Dein CO₂-Fußabdruck ist unterdurchschnittlich – du machst vieles richtig. Kleine Anpassungen könnten ihn weiter verringern. <br><img src=\"images/niedrig.png\">"
+    },
+    {
+      "percentage": 50,
+      "text": "⚖️ Dein CO₂-Fußabdruck ist durchschnittlich – du hast ein ausgewogenes Verhalten, aber noch Potenzial bei Mobilität oder Konsum. <br><img src=\"images/durchschnittlich.png\">"
+    },
+    {
+      "percentage": 75,
+      "text": "🔥 Dein CO₂-Fußabdruck ist überdurchschnittlich – überlege, wo du Energie, Fleischkonsum oder Flüge einsparen kannst. <br><img src=\"images/hoch.png\">"
+    },
+    {
+      "percentage": 100,
+      "text": "💨 Dein CO₂-Fußabdruck ist sehr hoch – du kannst viel bewirken, indem du deinen Lebensstil klimafreundlicher gestaltest. <br><img src=\"images/sehr_hoch.png\">"
+    }
+  ]
 }
