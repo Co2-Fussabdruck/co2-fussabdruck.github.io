@@ -1,7 +1,7 @@
 {
   "questions": [
     {
-      "text": "Wie oft nutzt du öffentliche Verkehrsmittel oder fährst Fahrrad statt Auto? (Je seltener du Bus oder Fahrrad nutzt, desto höher dein CO₂-Ausstoß.)",
+      "text": "Wie oft nutzt du öffentliche Verkehrsmittel oder fährst Fahrrad statt Auto? (Je seltener du Bus oder Fahrrad nutzt, desto höher dein CO₂-Ausstoß. 1 = sehr oft, 5 = nie)",
       "type": "range",
       "min": 1,
       "max": 5
@@ -13,7 +13,7 @@
       "max": 5
     },
     {
-      "text": "Welche Verkehrsmittel nutzt du regelmäßig? (Je klimaschädlicher das Verkehrsmittel, desto höher der Wert.)",
+      "text": "Welche Verkehrsmittel nutzt du regelmäßig?",
       "type": "checkbox",
       "options": [
         { "text": "Auto (Benzin/Diesel)", "value": 4 },
@@ -24,7 +24,7 @@
       ]
     },
     {
-      "text": "Wie häufig isst du tierische Produkte (Fleisch, Milch, Eier)? (Je häufiger, desto mehr CO₂.)",
+      "text": "Wie häufig isst du tierische Produkte (Fleisch, Milch, Eier)?",
       "type": "radio",
       "options": [
         { "text": "Täglich", "value": 4 },
@@ -34,7 +34,7 @@
       ]
     },
     {
-      "text": "Wie oft isst du regional und saisonal erzeugte Lebensmittel? (Je seltener, desto mehr CO₂ durch Transport und Lagerung.)",
+      "text": "Wie oft isst du regional und saisonal erzeugte Lebensmittel? (Je seltener, desto mehr CO₂ durch Transport und Lagerung. 1 = immer, 5 = nie)",
       "type": "range",
       "min": 1,
       "max": 5
@@ -46,7 +46,7 @@
       "max": 5
     },
     {
-      "text": "Wie wird dein Zuhause hauptsächlich beheizt? (Je fossiler die Energiequelle, desto höher der CO₂-Ausstoß.)",
+      "text": "Wie wird dein Zuhause hauptsächlich beheizt?",
       "type": "radio",
       "options": [
         { "text": "Gas / Öl", "value": 4 },
@@ -56,19 +56,19 @@
       ]
     },
     {
-      "text": "Wie viel Strom verbrauchst du im Jahr (geschätzt)? (Je höher der Verbrauch, desto mehr CO₂.)",
+      "text": "Wie viel Strom verbrauchst du im Jahr (geschätzt)? (1 = sehr wenig, 10 = sehr viel)",
       "type": "range",
       "min": 1,
       "max": 10
     },
     {
-      "text": "Wie viele Personen leben in deinem Haushalt? (Je weniger Personen pro Haushalt, desto höher der Pro-Kopf-Verbrauch an CO₂.)",
+      "text": "Wie viele Personen leben in deinem Haushalt? (Je weniger Personen pro Haushalt, desto höher der Pro-Kopf-Verbrauch an CO₂. 1 = allein, 8 = viele Mitbewohner)",
       "type": "range",
       "min": 1,
       "max": 8
     },
     {
-      "text": "Wie gut ist dein Zuhause gedämmt? (Je schlechter die Dämmung, desto höher der Heizbedarf und CO₂-Ausstoß.)",
+      "text": "Wie gut ist dein Zuhause gedämmt?",
       "type": "radio",
       "options": [
         { "text": "Sehr schlecht", "value": 4 },
@@ -78,7 +78,7 @@
       ]
     },
     {
-      "text": "Wie oft kaufst du neue Kleidung, Elektronik oder Möbel? (Je häufiger, desto höher dein CO₂-Ausstoß durch Produktion und Transport.)",
+      "text": "Wie oft kaufst du neue Kleidung, Elektronik oder Möbel?",
       "type": "radio",
       "options": [
         { "text": "Mehrmals im Monat", "value": 4 },
@@ -88,19 +88,19 @@
       ]
     },
     {
-      "text": "Wie selten reparierst, teilst oder recycelst du Dinge statt sie neu zu kaufen? (Je seltener, desto höher dein CO₂-Ausstoß.)",
+      "text": "Wie oft reparierst, recycelst oder teilst du Gegenstände statt sie neu zu kaufen? (Je seltener, desto höher dein CO₂-Ausstoß. 1 = sehr oft, 5 = nie)",
       "type": "range",
       "min": 1,
       "max": 5
     },
     {
-      "text": "Wie häufig fliegst du in den Urlaub? (Je häufiger, desto mehr CO₂.)",
+      "text": "Wie oft machst du Urlaub mit dem Flugzeug? (Je häufiger, desto mehr CO₂.)",
       "type": "range",
       "min": 0,
       "max": 5
     },
     {
-      "text": "Wie selten nutzt du Ökostrom oder erneuerbare Energiequellen? (Je seltener, desto mehr CO₂.)",
+      "text": "Wie häufig nutzt du Ökostrom oder beziehst Energie aus erneuerbaren Quellen? (Je seltener, desto mehr CO₂. 1 = immer, 5 = nie)",
       "type": "range",
       "min": 1,
       "max": 5
