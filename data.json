@@ -1,13 +1,13 @@
 {
   "questions": [
     {
-      "text": "Wie oft nutzt du öffentliche Verkehrsmittel oder fährst Fahrrad statt Auto?",
+      "text": "Wie oft nutzt du Auto statt öffentliche Verkehrsmittel oder Fahrrad?",
       "type": "range",
       "min": 1,
       "max": 5
     },
     {
-      "text": "Wie häufig fliegst du (Urlaub, Beruf, etc.)?",
+      "text": "Wie häufig fliegst du pro Jahr (Urlaub oder Beruf)?",
       "type": "range",
       "min": 0,
       "max": 5
@@ -18,13 +18,13 @@
       "options": [
         { "text": "Auto (Benzin/Diesel)", "value": 4 },
         { "text": "Elektroauto", "value": 3 },
-        { "text": "Fahrrad / Zu Fuß", "value": 1 },
         { "text": "Öffentliche Verkehrsmittel", "value": 2 },
-        { "text": "Flugzeug (mehrmals im Jahr)", "value": 5 }
+        { "text": "Fahrrad oder zu Fuß", "value": 1 },
+        { "text": "Flugzeug", "value": 5 }
       ]
     },
     {
-      "text": "Wie häufig isst du tierische Produkte (Fleisch, Milch, Eier)?",
+      "text": "Wie oft isst du tierische Produkte (Fleisch, Milch, Eier)?",
       "type": "radio",
       "options": [
         { "text": "Täglich", "value": 4 },
@@ -34,29 +34,29 @@
       ]
     },
     {
-      "text": "Wie oft isst du regional und saisonal erzeugte Lebensmittel?",
+      "text": "Wie häufig isst du regionale und saisonale Lebensmittel?",
       "type": "range",
       "min": 1,
       "max": 5
     },
     {
-      "text": "Wie häufig isst du verarbeitete oder importierte Lebensmittel (z. B. Tiefkühlgerichte, Avocados, tropische Früchte)?",
+      "text": "Wie oft kaufst du importierte oder stark verarbeitete Lebensmittel?",
       "type": "range",
       "min": 1,
       "max": 5
     },
     {
-      "text": "Wie wird dein Zuhause hauptsächlich beheizt?",
+      "text": "Wie heizt du dein Zuhause hauptsächlich?",
       "type": "radio",
       "options": [
-        { "text": "Gas / Öl", "value": 4 },
+        { "text": "Gas oder Öl", "value": 4 },
         { "text": "Fernwärme", "value": 3 },
-        { "text": "Wärmepumpe / Strom", "value": 2 },
+        { "text": "Wärmepumpe oder Strom", "value": 2 },
         { "text": "Erneuerbare Energie (Solar, Holz, etc.)", "value": 1 }
       ]
     },
     {
-      "text": "Wie viel Strom verbrauchst du im Jahr (geschätzt)?",
+      "text": "Wie hoch schätzt du deinen jährlichen Stromverbrauch?",
       "type": "range",
       "min": 1,
       "max": 10
@@ -72,13 +72,13 @@
       "type": "radio",
       "options": [
         { "text": "Sehr schlecht", "value": 4 },
-        { "text": "Ausreichend", "value": 3 },
+        { "text": "Mittelmäßig", "value": 3 },
         { "text": "Gut", "value": 2 },
         { "text": "Sehr gut / Passivhaus", "value": 1 }
       ]
     },
     {
-      "text": "Wie oft kaufst du neue Kleidung, Elektronik oder Möbel?",
+      "text": "Wie häufig kaufst du neue Kleidung, Elektronik oder Möbel?",
       "type": "radio",
       "options": [
         { "text": "Mehrmals im Monat", "value": 4 },
@@ -88,19 +88,19 @@
       ]
     },
     {
-      "text": "Wie oft reparierst, recycelst oder teilst du Gegenstände statt sie neu zu kaufen?",
+      "text": "Wie oft reparierst, teilst oder recycelst du Dinge statt sie neu zu kaufen?",
       "type": "range",
       "min": 1,
       "max": 5
     },
     {
-      "text": "Wie oft machst du Urlaub mit dem Flugzeug?",
+      "text": "Wie oft reist du mit dem Flugzeug in den Urlaub?",
       "type": "range",
       "min": 0,
       "max": 5
     },
     {
-      "text": "Wie häufig nutzt du Ökostrom oder beziehst Energie aus erneuerbaren Quellen?",
+      "text": "Wie oft nutzt du Ökostrom oder erneuerbare Energiequellen?",
       "type": "range",
       "min": 1,
       "max": 5
