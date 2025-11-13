@@ -3,6 +3,13 @@ let rc = 0;
 let radioGroupCounter = 0;
 const radioGroups = [];
 
+function show_alert(alert_message) {
+    const dialog = document.getElementById("myDialog")
+    const dialog_text = document.getElementById("dialogText")
+    dialog_text.innerText = alert_message
+    dialog.showModal()
+}
+
 /* === Range-Frage === */
 function range(text, min = 1, max = 5) {
     const div = document.createElement("div");
@@ -112,7 +119,7 @@ function result(percentages,alert_message) {
             checked_radio_count++
         }
     });
-    
+    console.log(checked_radio_count,radioGroups.length)
     if (checked_radio_count >= radioGroups.length - 1) {
         let value = 0;
         let max_value = 0;
@@ -162,7 +169,7 @@ function result(percentages,alert_message) {
         document.body.innerHTML = "<div class='result-container'>"+nearest[1]+"</div>"
         
     } else {
-        alert(alert_message)
+        show_alert(alert_message)
     }
 }
 
