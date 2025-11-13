@@ -1,28 +1,6 @@
 {
   "questions": [
     {
-      "text": "Wie oft nutzt du öffentliche Verkehrsmittel oder fährst Fahrrad statt Auto?",
-      "type": "radio",
-      "options": [
-        { "text": "Nie", "value": 5 },
-        { "text": "Selten", "value": 4 },
-        { "text": "Manchmal", "value": 3 },
-        { "text": "Oft", "value": 2 },
-        { "text": "Sehr häufig", "value": 1 }
-      ]
-    },
-    {
-      "text": "Wie häufig fliegst du (Urlaub, Beruf, etc.)?",
-      "type": "radio",
-      "options": [
-        { "text": "Mehrmals im Jahr", "value": 5 },
-        { "text": "Einmal im Jahr", "value": 4 },
-        { "text": "Selten", "value": 3 },
-        { "text": "Fast nie", "value": 2 },
-        { "text": "Nie", "value": 1 }
-      ]
-    },
-    {
       "text": "Welche Verkehrsmittel nutzt du regelmäßig?",
       "type": "checkbox",
       "options": [
@@ -31,6 +9,68 @@
         { "text": "Fahrrad / Zu Fuß", "value": 1 },
         { "text": "Öffentliche Verkehrsmittel", "value": 2 },
         { "text": "Flugzeug (mehrmals im Jahr)", "value": 5 }
+      ]
+    },
+    {
+      "text": "Welche Arten von Lebensmitteln isst du häufig?",
+      "type": "checkbox",
+      "options": [
+        { "text": "Fleisch", "value": 4 },
+        { "text": "Milchprodukte", "value": 3 },
+        { "text": "Regionale Produkte", "value": 1 },
+        { "text": "Importierte Lebensmittel", "value": 4 },
+        { "text": "Saisonale Produkte", "value": 1 }
+      ]
+    },
+    {
+      "text": "Welche Energiequellen nutzt du zu Hause?",
+      "type": "checkbox",
+      "options": [
+        { "text": "Strom aus fossilen Quellen", "value": 4 },
+        { "text": "Ökostrom", "value": 1 },
+        { "text": "Solarenergie", "value": 1 },
+        { "text": "Holz oder Biomasse", "value": 2 },
+        { "text": "Fernwärme", "value": 3 }
+      ]
+    },
+    {
+      "text": "Welche Freizeitaktivitäten machst du regelmäßig?",
+      "type": "checkbox",
+      "options": [
+        { "text": "Flugreisen", "value": 5 },
+        { "text": "Autoreisen", "value": 4 },
+        { "text": "Zug- oder Busreisen", "value": 2 },
+        { "text": "Wandern, Radfahren oder Spazieren", "value": 1 },
+        { "text": "Streaming / Gaming", "value": 3 }
+      ]
+    },
+    {
+      "text": "Welche Maßnahmen nutzt du im Haushalt?",
+      "type": "checkbox",
+      "options": [
+        { "text": "LED-Lampen", "value": 1 },
+        { "text": "Wasser sparen", "value": 1 },
+        { "text": "Energiespargeräte", "value": 2 },
+        { "text": "Heizung oft an", "value": 4 },
+        { "text": "Standby-Geräte ausschalten", "value": 1 }
+      ]
+    },
+    {
+      "text": "Wie häufig fliegst du (Urlaub, Beruf, etc.)?",
+      "type": "range",
+      "min": 0,
+      "max": 10,
+      "text_note": "(0 = wenig, 10 = viel)"
+    },
+    {
+      "text": "Wie oft nutzt du öffentliche Verkehrsmittel oder fährst Fahrrad statt Auto?",
+      "type": "radio",
+      "options": [
+        { "text": "Nie", "value": 5 },
+        { "text": "Selten", "value": 4 },
+        { "text": "Manchmal", "value": 3 },
+        { "text": "Oft", "value": 2 },
+        { "text": "Sehr häufig", "value": 1 }
       ]
     },
     {
@@ -120,23 +160,6 @@
         { "text": "Manchmal", "value": 3 },
         { "text": "Oft", "value": 2 },
         { "text": "Sehr häufig", "value": 1 }
-      ]
-    },
-    {
-      "text": "Wie oft machst du Urlaub mit dem Flugzeug? (0 = wenig, 10 = viel)",
-      "type": "range",
-      "min": 0,
-      "max": 10
-    },
-    {
-      "text": "Wie häufig nutzt du Ökostrom oder beziehst Energie aus erneuerbaren Quellen?",
-      "type": "radio",
-      "options": [
-        { "text": "Nie", "value": 5 },
-        { "text": "Selten", "value": 4 },
-        { "text": "Manchmal", "value": 3 },
-        { "text": "Oft", "value": 2 },
-        { "text": "Immer", "value": 1 }
       ]
     },
     {
