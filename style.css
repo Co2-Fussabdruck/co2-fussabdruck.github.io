@@ -1,8 +1,8 @@
 /* ===== Global Styles ===== */
 body {
   font-family: 'Inter', Arial, sans-serif;
-  background: linear-gradient(135deg, #0a0f2c, #1a2a6c, #3b3f88);
-  color: #e4e8f7;
+  background: linear-gradient(135deg, #0a1f1a, #0f3d2e, #145b3f);
+  color: #e6f5ec;
   padding: 30px;
   line-height: 1.6;
   transition: background 0.8s ease, color 0.4s ease;
@@ -10,7 +10,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Subtle floating background gradient animation */
+/* Animated background gradient */
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -23,7 +23,7 @@ body {
 
 /* ===== Card Containers ===== */
 div {
-  background: linear-gradient(145deg, #101739, #192a56);
+  background: linear-gradient(145deg, #0d2b22, #114534);
   padding: 20px 24px;
   margin-bottom: 20px;
   border-radius: 18px;
@@ -33,7 +33,7 @@ div {
   overflow: hidden;
 }
 
-/* Subtle light sweep effect */
+/* Animated light reflection */
 div::before {
   content: "";
   position: absolute;
@@ -41,7 +41,7 @@ div::before {
   left: -75%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.2), transparent);
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.15), transparent);
   transform: skewX(-25deg);
   transition: 0.7s;
 }
@@ -52,7 +52,7 @@ div:hover::before {
 
 div:hover {
   transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 14px 40px rgba(0, 60, 30, 0.4);
 }
 
 /* ===== Range Input ===== */
@@ -67,36 +67,36 @@ input[type="range"] {
   margin: 0 12px;
   appearance: none;
   height: 6px;
-  background: linear-gradient(90deg, #304ffe, #536dfe);
+  background: linear-gradient(90deg, #1b5e20, #2e7d32);
   border-radius: 4px;
   transition: box-shadow 0.3s ease;
 }
 
 input[type="range"]:hover {
-  box-shadow: 0 0 12px rgba(83, 109, 254, 0.6);
+  box-shadow: 0 0 12px rgba(76, 175, 80, 0.5);
 }
 
 input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   width: 20px;
   height: 20px;
-  background: #82b1ff;
+  background: #4caf50;
   border-radius: 50%;
   cursor: pointer;
   transition: transform 0.2s ease, background 0.3s ease;
-  box-shadow: 0 0 10px rgba(130, 177, 255, 0.5);
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.4);
 }
 
 input[type="range"]::-webkit-slider-thumb:hover {
   transform: scale(1.25);
-  background: #bbdefb;
+  background: #81c784;
 }
 
 /* ===== Labels and Inputs ===== */
 label {
   margin-left: 5px;
   font-weight: 500;
-  color: #cdd9ff;
+  color: #c8f7d1;
 }
 
 .options-container {
@@ -110,13 +110,13 @@ label {
   margin-right: 12px;
   transform: scale(1.1);
   cursor: pointer;
-  accent-color: #3d5afe;
+  accent-color: #43a047;
 }
 
 /* ===== Buttons ===== */
 button {
-  background: linear-gradient(135deg, #3949ab, #1a237e);
-  color: #e8eaf6;
+  background: linear-gradient(135deg, #2e7d32, #1b5e20);
+  color: #e8f5e9;
   border: none;
   padding: 12px 28px;
   border-radius: 12px;
@@ -134,7 +134,7 @@ button::after {
   position: absolute;
   top: 0; left: -100%;
   width: 100%; height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.25), transparent);
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.25), transparent);
   transition: all 0.6s;
 }
 
@@ -144,7 +144,7 @@ button:hover::after {
 
 button:hover {
   transform: translateY(-4px) scale(1.03);
-  box-shadow: 0 10px 25px rgba(29, 46, 180, 0.6);
+  box-shadow: 0 10px 25px rgba(0, 255, 100, 0.25);
 }
 
 /* ===== Result Container ===== */
@@ -152,16 +152,16 @@ button:hover {
   max-width: 850px;
   margin: 60px auto;
   padding: 40px 50px;
-  background: rgba(25, 35, 70, 0.9);
+  background: rgba(20, 40, 30, 0.9);
   backdrop-filter: blur(10px);
   border-radius: 22px;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 35px rgba(0, 40, 20, 0.4);
   font-size: 26px;
   font-weight: 700;
   text-align: center;
-  color: #8ab4ff;
+  color: #81c784;
   animation: fadeIn 0.6s ease-out, floatUp 0.8s ease-in-out;
-  border: 1px solid rgba(80, 100, 255, 0.2);
+  border: 1px solid rgba(100, 200, 150, 0.2);
 }
 
 .result-container img {
@@ -174,7 +174,7 @@ button:hover {
 
 .result-container img:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 28px rgba(90, 120, 255, 0.5);
+  box-shadow: 0 8px 28px rgba(100, 255, 150, 0.4);
 }
 
 /* ===== Animations ===== */
