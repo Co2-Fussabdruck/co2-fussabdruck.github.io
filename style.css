@@ -1,3 +1,84 @@
+/* ===== Base Dialog Styles ===== */
+dialog {
+  border: none;
+  border-radius: 18px;
+  padding: 30px 40px;
+  width: 360px;
+  max-width: 90%;
+  font-family: 'Inter', Arial, sans-serif;
+  text-align: center;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  animation: fadeInDialog 0.35s ease-out;
+}
+
+/* Smooth opening animation */
+@keyframes fadeInDialog {
+  from { opacity: 0; transform: translateY(-15px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Backdrop effect */
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(5px);
+}
+
+/* Text inside dialog */
+#dialogText {
+  font-size: 17px;
+  line-height: 1.5;
+  margin-bottom: 22px;
+}
+
+/* Close button (default) */
+dialog form button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* ======================================================
+   💙 Default (Blue Theme – when <body> has no class)
+====================================================== */
+body:not(.green) dialog {
+  background: linear-gradient(145deg, #102a43, #1b3b5f);
+  color: #d9e8ff;
+  border: 1px solid rgba(100, 150, 255, 0.25);
+}
+
+body:not(.green) dialog form button {
+  background: linear-gradient(135deg, #4a90e2, #357ab8);
+}
+
+body:not(.green) dialog form button:hover {
+  background: linear-gradient(135deg, #357ab8, #2a6da1);
+  box-shadow: 0 6px 16px rgba(53, 122, 184, 0.3);
+}
+
+/* ======================================================
+   🌿 Green Theme – when <body class="green">
+====================================================== */
+body.green dialog {
+  background: linear-gradient(145deg, #0d2b22, #114534);
+  color: #c8f7d1;
+  border: 1px solid rgba(100, 200, 150, 0.3);
+}
+
+body.green dialog form button {
+  background: linear-gradient(135deg, #2e7d32, #1b5e20);
+}
+
+body.green dialog form button:hover {
+  background: linear-gradient(135deg, #388e3c, #256c2b);
+  box-shadow: 0 6px 16px rgba(0, 255, 100, 0.3);
+}
+
 /* ======================================================
    🌊 BLUE THEME (Default)
 ====================================================== */
