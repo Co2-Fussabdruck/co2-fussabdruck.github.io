@@ -90,13 +90,13 @@ function radio(text, options) {
 }
 
 /* === Ergebnis-Button === */
-function result_button(text, percentages) {
+function result_button(text, percentages,alert_message) {
     const div = document.createElement("div");
     const button = document.createElement("button");
     button.textContent = text;
 
     button.addEventListener("click", () => {
-        result(percentages);
+        result(percentages,alert_message);
     });
 
     div.appendChild(button);
@@ -104,53 +104,65 @@ function result_button(text, percentages) {
 }
 
 /* === Ergebnis-Berechnung === */
-function result(percentages) {
-    let value = 0;
-    let max_value = 0;
-
-    // Ranges
-    const ranges = document.querySelectorAll("input[type=range]");
-    ranges.forEach(r => {
-        value += Number(r.value) - Number(r.min);
-        max_value += Number(r.max) - Number(r.min);
-    });
-
-    // Checkboxes
-    const allCheckboxes = document.querySelectorAll("input[type=checkbox]");
-    allCheckboxes.forEach(cb => {
-        max_value += Number(cb.value);
-        if (cb.checked) value += Number(cb.value);
-    });
-
-    // Radios
-    const checkedRadios = document.querySelectorAll("input[type=radio]:checked");
-    checkedRadios.forEach(r => {
-        value += Number(r.value);
-    });
-
-    // Radio-Gruppen Max
+function result(percentages,alert_message) {
+    let checked_radio_count = 0
     radioGroups.forEach(name => {
-        const group = document.querySelectorAll(`input[name='${name}']`);
-        let highest = 0;
-        group.forEach(r => {
-            if (Number(r.value) > highest) highest = Number(r.value);
-        });
-        max_value += highest;
-    });
-
-    // Prozentuale Bewertung
-    const percentage = value / max_value;
-    let nearest = percentages[0];
-    let minDiff = Math.abs(percentage - percentages[0][0] / 100);
-
-    for (let i = 1; i < percentages.length; i++) {
-        const diff = Math.abs(percentage - percentages[i][0] / 100);
-        if (diff < minDiff) {
-            minDiff = diff;
-            nearest = percentages[i];
+        const checked_radio = document.querySelector(`input[type=radio][name='${name}']:checked`)
+        if (checked_radio) {
+            checked_radio_count++
         }
+    });
+    console.log(checked_radio_count,radioGroups.length)
+    if (checked_radio_count >= radioGroups.length - 1) {
+        let value = 0;
+        let max_value = 0;
+
+        // Ranges
+        const ranges = document.querySelectorAll("input[type=range]");
+        ranges.forEach(r => {
+            value += Number(r.value) - Number(r.min);
+            max_value += Number(r.max) - Number(r.min);
+        });
+
+        // Checkboxes
+        const allCheckboxes = document.querySelectorAll("input[type=checkbox]");
+        allCheckboxes.forEach(cb => {
+            max_value += Number(cb.value);
+            if (cb.checked) value += Number(cb.value);
+        });
+
+        // Radios
+        const checkedRadios = document.querySelectorAll("input[type=radio]:checked");
+        checkedRadios.forEach(r => {
+            value += Number(r.value);
+        });
+
+        // Radio-Gruppen Max
+        radioGroups.forEach(name => {
+            const group = document.querySelectorAll(`input[name='${name}']`);
+            let highest = 0;
+            group.forEach(r => {
+                if (Number(r.value) > highest) highest = Number(r.value);
+            });
+            max_value += highest;
+        });
+
+        // Prozentuale Bewertung
+        const percentage = value / max_value;
+        let nearest = percentages[0];
+        let minDiff = Math.abs(percentage - percentages[0][0] / 100);
+
+        for (let i = 1; i < percentages.length; i++) {
+            const diff = Math.abs(percentage - percentages[i][0] / 100);
+            if (diff < minDiff) {
+                minDiff = diff;
+                nearest = percentages[i];
+            }
+        }
+        document.body.innerHTML = "<div class='result-container'>"+nearest[1]+"</div>"
+        
+    } else {
+        alert(alert_message)
     }
-    const body = document.querySelector("body")
-    body.innerHTML = "<div class='result-container'>" + nearest[1] + "</div>"
 }
 
