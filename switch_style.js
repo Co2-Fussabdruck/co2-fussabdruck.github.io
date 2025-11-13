@@ -3,14 +3,14 @@ const themeToggle = document.getElementById("theme-toggle");
 document.addEventListener("DOMContentLoaded", () => {
   const theme = localStorage.getItem("theme");
   if (theme === "dark") {
-    document.body.classList.add("dark");
-    themeToggle.textContent = "☀️";
+    document.body.classList.add("green");
+    themeToggle.textContent = "🟢";
   }
 });
 
 themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("green");
-  const isDark = document.body.classList.contains("dark");
-  themeToggle.textContent = isDark ? "☀️" : "🌙";
-  localStorage.setItem("theme", isDark ? "dark" : "light");
+  const isGreen = document.body.classList.contains("green");
+  themeToggle.textContent = isGreen ? "🟢" : "🔵";
+  localStorage.setItem("theme", isGreen ? "dark" : "light");
 });
