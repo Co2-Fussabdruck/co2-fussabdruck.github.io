@@ -1,4 +1,4 @@
-fetch('./data.json')
+fetch('https://co2-fussabdruck.github.io/data.json')
     .then((response) => response.json())
     .then((json) => {
         console.log("xxx", json)
@@ -22,7 +22,7 @@ fetch('./data.json')
                 for (let j = 0; j < json.answers.length; j++) {
                     percentages.push([json.answers[j].percentage, json.answers[j].text])
                 }
-                result_button(json.questions[i].text, percentages)
+                result_button(json.questions[i].text, percentages,json.alert_message)
             }
         }
     });
