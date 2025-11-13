@@ -131,5 +131,6 @@
       "percentage": 100,
       "text": "💨 Dein CO₂-Fußabdruck ist sehr hoch – du kannst viel bewirken, indem du deinen Lebensstil klimafreundlicher gestaltest. <br><img src=\"images/sehr_hoch.png\">"
     }
-  ]
+  ],
+  "alert_message": "Du musst zuerst alle Fragen beantworten."
 }
