@@ -112,7 +112,7 @@ function result(percentages,alert_message) {
             checked_radio_count++
         }
     });
-    console.log(checked_radio_count,radioGroups.length)
+    
     if (checked_radio_count >= radioGroups.length - 1) {
         let value = 0;
         let max_value = 0;
