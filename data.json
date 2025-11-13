@@ -1,16 +1,26 @@
 {
   "questions": [
     {
-      "text": "Wie oft nutzt du öffentliche Verkehrsmittel oder fährst Fahrrad statt Auto? (1 = sehr oft, 5 = nie)",
-      "type": "range",
-      "min": 1,
-      "max": 5
+      "text": "Wie oft nutzt du öffentliche Verkehrsmittel oder fährst Fahrrad statt Auto?",
+      "type": "radio",
+      "options": [
+        { "text": "Nie", "value": 5 },
+        { "text": "Selten", "value": 4 },
+        { "text": "Manchmal", "value": 3 },
+        { "text": "Oft", "value": 2 },
+        { "text": "Sehr häufig", "value": 1 }
+      ]
     },
     {
-      "text": "Wie häufig fliegst du (Urlaub, Beruf, etc.)? (0 = nie, 5 = sehr häufig)",
-      "type": "range",
-      "min": 0,
-      "max": 5
+      "text": "Wie häufig fliegst du (Urlaub, Beruf, etc.)?",
+      "type": "radio",
+      "options": [
+        { "text": "Mehrmals im Jahr", "value": 5 },
+        { "text": "Einmal im Jahr", "value": 4 },
+        { "text": "Selten", "value": 3 },
+        { "text": "Fast nie", "value": 2 },
+        { "text": "Nie", "value": 1 }
+      ]
     },
     {
       "text": "Welche Verkehrsmittel nutzt du regelmäßig?",
@@ -34,16 +44,26 @@
       ]
     },
     {
-      "text": "Wie oft isst du regional und saisonal erzeugte Lebensmittel? (1 = immer, 5 = nie)",
-      "type": "range",
-      "min": 1,
-      "max": 5
+      "text": "Wie oft isst du regional und saisonal erzeugte Lebensmittel?",
+      "type": "radio",
+      "options": [
+        { "text": "Nie", "value": 5 },
+        { "text": "Selten", "value": 4 },
+        { "text": "Manchmal", "value": 3 },
+        { "text": "Oft", "value": 2 },
+        { "text": "Sehr häufig", "value": 1 }
+      ]
     },
     {
-      "text": "Wie häufig isst du verarbeitete oder importierte Lebensmittel (z. B. Tiefkühlgerichte, Avocados, tropische Früchte)? (1 = selten, 5 = sehr häufig)",
-      "type": "range",
-      "min": 1,
-      "max": 5
+      "text": "Wie häufig isst du verarbeitete oder importierte Lebensmittel (z. B. Tiefkühlgerichte, Avocados, tropische Früchte)?",
+      "type": "radio",
+      "options": [
+        { "text": "Täglich", "value": 5 },
+        { "text": "Mehrmals pro Woche", "value": 4 },
+        { "text": "Selten", "value": 3 },
+        { "text": "Fast nie", "value": 2 },
+        { "text": "Nie", "value": 1 }
+      ]
     },
     {
       "text": "Wie wird dein Zuhause hauptsächlich beheizt?",
@@ -56,16 +76,20 @@
       ]
     },
     {
-      "text": "Wie viel Strom verbrauchst du im Jahr (geschätzt)? (1 = sehr wenig, 10 = sehr viel)",
+      "text": "Wie viel Strom verbrauchst du im Jahr (geschätzt)? (0 = wenig, 10 = viel)",
       "type": "range",
-      "min": 1,
+      "min": 0,
       "max": 10
     },
     {
-      "text": "Wie viele Personen leben in deinem Haushalt? (1 = allein, 8 = viele Mitbewohner)",
-      "type": "range",
-      "min": 1,
-      "max": 8
+      "text": "Wie viele Personen leben in deinem Haushalt?",
+      "type": "radio",
+      "options": [
+        { "text": "1 Person", "value": 4 },
+        { "text": "2–3 Personen", "value": 3 },
+        { "text": "4–5 Personen", "value": 2 },
+        { "text": "6 oder mehr Personen", "value": 1 }
+      ]
     },
     {
       "text": "Wie gut ist dein Zuhause gedämmt?",
@@ -88,22 +112,32 @@
       ]
     },
     {
-      "text": "Wie oft reparierst, recycelst oder teilst du Gegenstände statt sie neu zu kaufen? (1 = sehr oft, 5 = nie)",
-      "type": "range",
-      "min": 1,
-      "max": 5
+      "text": "Wie oft reparierst, recycelst oder teilst du Gegenstände statt sie neu zu kaufen?",
+      "type": "radio",
+      "options": [
+        { "text": "Nie", "value": 5 },
+        { "text": "Selten", "value": 4 },
+        { "text": "Manchmal", "value": 3 },
+        { "text": "Oft", "value": 2 },
+        { "text": "Sehr häufig", "value": 1 }
+      ]
     },
     {
-      "text": "Wie oft machst du Urlaub mit dem Flugzeug? (0 = nie, 5 = sehr häufig)",
+      "text": "Wie oft machst du Urlaub mit dem Flugzeug? (0 = wenig, 10 = viel)",
       "type": "range",
       "min": 0,
-      "max": 5
+      "max": 10
     },
     {
-      "text": "Wie häufig nutzt du Ökostrom oder beziehst Energie aus erneuerbaren Quellen? (1 = immer, 5 = nie)",
-      "type": "range",
-      "min": 1,
-      "max": 5
+      "text": "Wie häufig nutzt du Ökostrom oder beziehst Energie aus erneuerbaren Quellen?",
+      "type": "radio",
+      "options": [
+        { "text": "Nie", "value": 5 },
+        { "text": "Selten", "value": 4 },
+        { "text": "Manchmal", "value": 3 },
+        { "text": "Oft", "value": 2 },
+        { "text": "Immer", "value": 1 }
+      ]
     },
     {
       "text": "Berechne dein Ergebnis",
