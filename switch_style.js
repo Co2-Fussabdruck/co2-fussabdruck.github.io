@@ -11,9 +11,9 @@ function saveTheme() {
 }
 if (isNaN(parseInt(localStorage.getItem("theme"))) == true) {
   saveTheme()
+} else {
+  currentTheme = localStorage.getItem("theme")
 }
-
-currentTheme = localStorage.getItem("theme")
 
 function updateTheme() {
   theme_color.style.setProperty("--theme", colors[currentTheme])
