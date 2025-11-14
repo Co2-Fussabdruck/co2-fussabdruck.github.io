@@ -1,16 +1,30 @@
 const themeToggle = document.getElementById("theme-toggle");
+let theme_color = document.querySelector(":root")
+const colors = ["#fe2712", "#fbf203", "#0247fe", "#ff7f00", "#66b032", "#800080"];
 
-document.addEventListener("DOMContentLoaded", () => {
-  const theme = localStorage.getItem("theme");
-  if (theme === "green") {
-    document.body.classList.add("green");
-    themeToggle.textContent = "🟢";
-  }
+let currentTheme = 0
+
+
+
+function saveTheme() {
+  localStorage.setItem("theme", currentTheme)
+}
+if (localStorage.getItem("theme") == null) {
+  saveTheme()
+}
+
+currentTheme = localStorage.getItem("theme")
+
+function updateTheme() {
+  theme_color.style.setProperty("--theme", colors[currentTheme])
+}
+
+document.addEventListener("DOMContentLoaded", ()=>{
+  updateTheme()
 });
 
 themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("green");
-  const isGreen = document.body.classList.contains("green");
-  themeToggle.textContent = isGreen ? "🟢" : "🔵";
-  localStorage.setItem("theme", isGreen ? "green" : "blue");
+  currentTheme = (currentTheme + 1) % colors.length
+  updateTheme()
+  saveTheme()
 });
