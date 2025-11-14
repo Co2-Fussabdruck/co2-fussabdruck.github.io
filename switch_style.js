@@ -12,7 +12,7 @@ function saveTheme() {
 if (isNaN(parseInt(localStorage.getItem("theme"))) == true) {
   saveTheme()
 } else {
-  currentTheme = localStorage.getItem("theme")
+  currentTheme = (localStorage.getItem("theme")) % colors.length
 }
 
 function updateTheme() {
