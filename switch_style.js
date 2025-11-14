@@ -9,7 +9,7 @@ let currentTheme = 0
 function saveTheme() {
   localStorage.setItem("theme", currentTheme)
 }
-if (localStorage.getItem("theme") == null) {
+if (parseInt(localStorage.getItem("theme")) == null) {
   saveTheme()
 }
 
