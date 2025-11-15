@@ -6,7 +6,7 @@ function saveTheme() {
   localStorage.setItem("theme", themeToggle.value)
 }
 if (localStorage.getItem("theme") == null) {
-  saveTheme()
+  localStorage.setItem("theme", document.querySelector("select > option").value)
 }
 
 themeToggle.value = localStorage.getItem("theme")
