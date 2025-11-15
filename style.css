@@ -21,6 +21,7 @@
   --shadow-strong: rgba(0, 0, 60, 0.45);
 }
 
+
 /* ======================================================
    🌈 GLOBAL THEME USING VARIABLES (BLUE LOOKS IDENTICAL)
 ====================================================== */
@@ -84,6 +85,43 @@ div:hover {
   transform: translateY(-6px) scale(1.02);
   box-shadow: 0 14px 40px var(--shadow-strong);
 }
+
+/* ======================================================
+   🌈 SELECT (theme-matching)
+====================================================== */
+
+select {
+  background: linear-gradient(135deg, var(--theme), var(--theme-dark));
+  color: var(--text-light);
+  border: 1px solid var(--theme-dark);
+  padding: 10px 14px;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px var(--shadow);
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  appearance: none;
+}
+
+/* hover */
+select:hover {
+  background: linear-gradient(135deg, var(--theme-light), var(--theme));
+  box-shadow: 0 8px 22px var(--shadow-strong);
+}
+
+/* focus */
+select:focus {
+  outline: none;
+  border-color: var(--theme-accent);
+  box-shadow: 0 0 10px var(--theme-accent);
+}
+
+/* options should also match theme */
+select option {
+  background: var(--theme-dark);
+  color: var(--text-light);
+}
+
 
 /* ======================================================
    🌈 TOP RIGHT THEME TOGGLE
